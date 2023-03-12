@@ -19,6 +19,35 @@
     }
 }
 
+public class DoorMachine
+{
+    private DoorState state;
+
+    public DoorMachine()
+    {
+        state = DoorState.Locked;
+        Console.WriteLine("Pintu terkunci");
+    }
+
+    public void Unlock()
+    {
+        state = DoorState.Unlocked;
+        Console.WriteLine("Pintu tidak terkunci");
+    }
+
+    public void Lock()
+    {
+        state = DoorState.Locked;
+        Console.WriteLine("Pintu terkunci");
+    }
+
+    private enum DoorState
+    {
+        Locked,
+        Unlocked
+    }
+}
+
 
 class Program
 {
